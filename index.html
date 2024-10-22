@@ -3,20 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Links</title>
+    <title>Portfolio with Background Video</title>
+    <style>
+        /* Style to make the video full-screen background */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1; /* Ensure the video is in the background */
+        }
+
+        /* Optional: Add content styling */
+        .content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 20%;
+        }
+    </style>
 </head>
 <body>
-    <!-- GitHub Pages Link -->
-    <h2>Visit My Portfolio Website</h2>
-    <a href="https://surajgodiyal.github.io/Home/" target="_blank">https://surajgodiyal.github.io/Home/</a>
-    
-    <hr>
 
-    <!-- MP4 Video Link -->
-    <h2>Watch My Video</h2>
-    <video width="640" height="360" controls>
+    <!-- Background Video -->
+    <video autoplay muted loop>
         <source src="https://github.com/Surajgodiyal/Home/blob/main/video_20241022_100412_edit.mp4?raw=true" type="video/mp4">
         Your browser does not support the video tag.
     </video>
+
+    <!-- Content on top of the video -->
+    <div class="content">
+        <h1>Welcome to My Portfolio</h1>
+        <p><a href="https://surajgodiyal.github.io/Home/" target="_blank" style="color: #fff; text-decoration: underline;">Visit my Portfolio Website</a></p>
+    </div>
+
 </body>
 </html>
